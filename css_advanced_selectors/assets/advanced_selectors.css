@@ -27,6 +27,15 @@ header > img {
   width: 100px;
 }
 
+input[type="submit"]:last-child:hover {
+  width: 100px;
+  background-color: #DAA520;
+}
+
+/* [type="button"]:last-child:hover {
+    
+} */
+
 /* Selects all elements with the class attribute "ingredients-list" */
 .ingredients-list {
 
@@ -41,6 +50,21 @@ ol {
 .user_review h4 {
   font-size: 18px;
   font-weight: bold;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+  outline: none;
+  }
+
+ol li:nth-of-type(2n) {
+    background-color: lightgray;
+}
+
+h2 + .user_review {
+  border-top: black;
+  border-style: solid;
+  border-top-width: 1px;
 }
 
 
