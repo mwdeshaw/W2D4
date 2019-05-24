@@ -1,6 +1,12 @@
 def first_char?(string1, string2)
-  
+  substrings = []
+  char_arr = string1.chars
+
+  perms = char_arr.permutation.to_a
+  perms.any? { |anagram| string2.chars == anagram }
 end
+# p first_char?("gizmo", "sally")    #=> false
+# p first_char?("elvis", "lives")    #=> true
 
 
 def second_anagram?(string1, string2)
@@ -16,18 +22,5 @@ def second_anagram?(string1, string2)
 
   return true if chars_2.empty?
 end
-
-p second_anagram?("gizmo", "sally")    #=> false
-p second_anagram?("elvis", "lives")    #=> true
-
-
-
-
-
- # substrings = []
-  # (0...string1.length-1).each do |i|
-  #   (i+1...string1.length).each do |j|
-  #     substrings << string1[i..j]
-  #   end
-  # end
-  # p substrings
+# p second_anagram?("gizmo", "sally")    #=> false
+# p second_anagram?("elvis", "lives")    #=> true
